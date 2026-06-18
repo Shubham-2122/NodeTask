@@ -1,0 +1,52 @@
+NPM Modules / Third-Party Modules in Node.js
+
+Third-party modules એટલે બીજા developers દ્વારા બનાવેલા packages/modules.
+
+Difference
+Type	Meaning
+Core Module	Node.js built-in
+Local Module	User-created
+Third-Party Module	NPM પરથી install કરેલા
+
+What is NPM?
+
+NPM = Node Package Manager
+
+Official package manager of Node.js.
+
+age mare koei package.json file jate create karivi hoy to 
+cmd : npm init -y
+
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node app.js"
+  },
+
+
+  Install Third-Party Module
+Example → Chalk
+version :npm install chalk
+
+version : npm install chalk@4
+
+nodemon auto start server
+nodemon :  npm install nodemon
+
+development : npm install nodemon --save-dev
+
+
+
+Mini Practice Project
+
+Install:
+
+express
+chalk
+nodemon
+
+Create:
+
+Basic server
+Color console message
+
+This gives complete practical understanding of NPM modules.
