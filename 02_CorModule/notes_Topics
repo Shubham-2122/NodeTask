@@ -1,0 +1,103 @@
+
+Core Modules એટલે Node.js સાથે પહેલાથી આવેલા modules.
+એને install કરવાની જરૂર નથી.
+
+Example:
+
+fs
+http
+path
+os
+events
+
+
+Node.js app core module
+
+
+1. FS Module (File System)
+
+Used for:
+
+File create
+Read
+Write
+
+
+Delete
+; const fs = require('fs');
+
+; fs.unlinkSync('demo.txt');
+
+; console.log("File Deleted");
+
+; node app.js 
+
+
+2. PATH Module : File path handling
+
+file name and folder jova
+
+const path = require('path')
+
+console.log(path.basename(__filename));
+console.log(path.dirname(__filename))
+
+
+3. OS Module
+
+Used for:
+
+System information
+
+const os =  require('os')
+
+console.log("Platform:", os.platform());
+console.log("CPU:", os.cpus().length);
+console.log("Home Dir:", os.homedir());
+
+
+4. HTTP Module
+
+Used for:
+
+Server create
+
+const http = require('http');
+
+const server = http.createServer((req,res)=>{
+    // console.log(req)
+    // console.log(res)
+    console.log(req.url,req.method)
+    res.write("Welcome To Node Server")
+    res.end();
+})
+
+server.listen(3000);
+console.log("server runing successfuly")
+
+
+5. EVENTS Module
+Used for:
+
+Event handling
+
+
+
+
+
+Practice Tasks
+Task 1
+
+Create file using fs module
+
+Task 2
+
+Read file using fs module
+
+Task 3
+
+Create basic server using http module
+
+Task 4
+
+Display system info using os module
