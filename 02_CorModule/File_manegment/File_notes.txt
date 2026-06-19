@@ -1,0 +1,53 @@
+
+Most Used File Operations
+Operation	   Function
+Create File	== writeFile()
+Read File	== readFile()
+Update File	== appendFile()
+Delete File	== unlink()
+Rename File	== rename()
+
+
+Real Time File Management ક્યાં use થાય?
+1. User Upload Files
+
+Examples:
+
+Profile photo
+Resume PDF
+Documents
+Real App:
+LinkedIn
+Instagram
+College portals
+2. Log Files Store કરવી
+
+Server errors store થાય છે.
+
+error.log
+
+Real time:
+
+API errors
+Login activity
+Payment logs
+3. Read/Write Data
+
+Text reports generate કરવા.
+
+Example:
+
+Invoice PDF
+Attendance report
+Student result
+4. Image Handling
+
+Images copy/move/delete.
+
+Used in:
+
+E-commerce
+Social media apps
+5. Backup Systems
+
+Automatic backup create કરવા.
