@@ -1,0 +1,28 @@
+SESSION 1 — Express Basics
+Topics Covered
+What is Express.js
+Why Express over HTTP module
+Create Express App
+Routing Basics
+Server Setup
+
+express : package hovu jaruri che 
+npm init -y 
+npm i express 
+npm install nodemon --save-dev
+
+Real-Time Example
+
+College Website Backend:
+
+Home route
+About route
+Courses route
+Contact route
+
+
+Student Tasks
+Portfolio routes
+College routes
+Product routes
+Student details route
