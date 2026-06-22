@@ -1,0 +1,126 @@
+SESSION 2 — Routing & Parameters in Node.js + Express
+
+આ topic backend development માટે બહુ important છે.
+Real-time applications માં dynamic data handle કરવા Route Parameters અને Query Strings use થાય છે.
+
+npm init -y
+npm i express
+npm i nodemon --save-dev
+
+1. Route Parameters
+
+Route parameter URL માં dynamic value લેવા માટે use થાય છે.
+
+:paramName
+
+
+How It Works
+Part	     Meaning
+:id	Dynamic  parameter
+req.params	  URL values લે છે
+
+
+app.get("/student/:id",(req,res)=>{
+    const id = req.params.id;
+
+    res.send("student id = "+id);
+})
+
+app.listen(5000,()=>{
+    console.log(`server Runing : http://localhost:5000`)
+})
+
+http://localhost:5000/student/101
+
+
+
+
+Multiple Parameters Example
+
+ app.get("/student/:id/:name",(req,res)=>{
+     const id = req.params.id;
+     const name = req.params.name;
+
+    res.send("Id = "+id + " name = "+name)
+})
+
+// http://localhost:5000/student/101/shubham
+
+Task 
+E-commerce websites માં product ID થી product fetch થાય છે.
+
+Example:
+
+Amazon
+Flipkart
+
+Id
+
+Task Movie Name 
+name
+
+
+
+2. Query Strings
+
+Query string search/filter માટે use થાય છે
+
+?key=value
+
+app.get("/search",(req,res)=>{
+    const name =  req.query.name;
+    res.send("name Query : "+name);
+})
+
+// http://localhost:5000/search?name=shubham
+
+
+Multiple Query Example
+
+
+// 3_ multiple Query 
+app.get("/search",(req,res)=>{
+    const name =  req.query.name;
+    const city = req.query.city
+    res.send("name Query : "+name + " From :"+ city);
+})
+
+// http://localhost:5000/search?name=shubham&city=bharuch
+
+
+
+
+Difference — Params vs Query
+Route Params	 Query Strings
+Required	     Optional
+Dynamic route	 Filtering/Search
+/product/101	 /search?id=101
+
+
+
+
+Task :
+
+
+1. User Profile Route
+
+Social media apps માં user profile dynamic route થી open થાય.
+
+Example:
+
+Instagram : username
+Facebook : username
+
+
+2) Real-Time Example 1 — Product Details API
+
+E-commerce websites માં product ID થી product fetch થાય છે.
+
+Example:
+
+Amazon : Products id
+Flipkart
+
+3 ) Real-Time Example 2 — Movie Info Route
+
+Movie Name : name find
