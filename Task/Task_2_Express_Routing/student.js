@@ -9,5 +9,4 @@ router.get("/student/:id", (req, res) => {
 
 });
 
-
 module.exports = router 
