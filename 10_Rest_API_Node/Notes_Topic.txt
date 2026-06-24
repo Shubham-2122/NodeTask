@@ -1,0 +1,118 @@
+SESSION 5 — REST API Development in Node.js + Express
+
+REST API backend development નો સૌથી important part છે.
+
+Used in:
+
+Instagram
+Amazon
+Netflix
+
+બધી apps frontend ↔ backend communication માટે APIs use કરે છે.
+
+REST API શું છે?
+
+REST API = frontend અને backend વચ્ચે data transfer system
+
+Mostly JSON format માં data મોકલે છે.
+
+Real-Time Example
+
+Frontend:
+
+React App
+
+↓
+
+API Call
+
+↓
+
+Backend Node.js
+
+↓
+
+Database
+
+CRUD Operations
+Operation	Method	Meaning
+Create	POST	Data add
+Read	GET	Data fetch
+Update	PUT	Data update
+Delete	DELETE	Data delete
+Dummy Database
+
+Currently MongoDB વગર array use કરીશું.
+
+let students = [];
+
+
+
+req.params vs req.query
+Feature	req.params	req.query
+URL	/students/1	/students?name=Shubham
+Access	req.params.id	req.query.name
+Use	Single resource	Search / Filter
+
+nique value (id) → params
+Search/Filter (name, course, city, age) → query
+Single record → find()
+Multiple records → filter()
+
+
+
+Real-Time Companies ક્યાં Use કરે?
+Company	        API Use
+Facebook	    User APIs
+Amazon	        Product APIs
+Netflix	        Movie APIs
+Banking Apps	Transaction APIs
+
+
+Important Interview Questions
+What is REST API?
+
+REST API is an architectural style used for communication between client and server using HTTP methods.
+
+What is CRUD?
+
+CRUD means Create, Read, Update, and Delete operations.
+
+Difference Between PUT and POST
+POST	PUT
+Create Data	Update Data
+
+
+
+Student Practical Tasks
+Task 1
+Create Notes CRUD API
+Routes:
+
+POST /notes
+GET /notes
+PUT /notes/:id
+DELETE /notes/:id
+
+
+Task 2
+Employee CRUD API
+Fields:
+id
+name
+department
+
+Task 3
+Todo API
+Fields:
+title
+completed
+
+Task 4
+Student Management API
+
+Fields:
+id
+name
+course
+
