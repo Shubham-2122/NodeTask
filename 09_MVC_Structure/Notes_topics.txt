@@ -127,3 +127,30 @@ Controller
    ↓
 Response
 
+Student Practical Tasks
+Task 1
+
+Create:
+
+userController
+userRoutes
+Task 2
+
+Create Product API:
+
+GET product
+POST product
+Task 3
+
+Create Auth API:
+
+login
+register
+Task 4
+
+Build Employee Management API
+
+Routes:
+
+/employees
+/employees/add

@@ -1,0 +1,81 @@
+Real-Time Example — Student Management API
+Folder Structure
+project/
+│
+├── controllers/
+│      └── studentController.js
+│
+├── routes/
+│      └── studentRoutes.js
+│
+├── app.js
+
+studentController.js
+const getStudents =(req,res)=>{
+    console.log("url : ",req.url," Method : ",req.method)
+    res.send("Gell All Students")
+}
+
+const addStudent =(req,res)=>{
+    console.log("url : ",req.url," Method : ",req.method)
+    res.send("Student Added")
+}
+
+module.exports = {
+    getStudents,
+    addStudent
+}
+
+
+studentRoutes.js
+const express = require("express")
+
+const route = express.Router()
+
+const studentController = require("../controllers/studentController")
+
+route.get("/",studentController.getStudents)
+
+route.post("/add",studentController.addStudent)
+
+module.exports = route
+
+
+
+Important Interview Questions
+What is MVC?
+
+MVC is a software architecture pattern that separates application into Model, View, and Controller.
+
+Why MVC Used?
+
+MVC helps create clean, scalable, and maintainable applications.
+
+What Controller Does?
+
+Controller handles business logic and responses.
+
+
+URLs
+Method	    URL
+GET	        /students
+POST	    /students/add
+
+
+MVC  Real-Time Benefits
+
+Benefit	        Meaning
+Clean Code	    Organized project
+Reusable	    Easy reuse
+Scalable	    Large apps support
+Team Friendly	Multiple developers
+Debugging Easy	Separate logic
+
+
+
+Industry Real-Time Usage
+Module	        Example
+Controllers 	API Logic
+Routes	        URL handling
+Models	        MongoDB schema
+Middleware	    Auth
