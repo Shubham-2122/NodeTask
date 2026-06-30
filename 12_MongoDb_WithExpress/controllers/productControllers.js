@@ -43,7 +43,7 @@ const updateproduct = async (req, res) => {
   try {
     await Product.findByIdAndUpdate(req.params.id, req.body);
     res.json({
-      message: "Updated"
+      message: "Updated",
     });
   } catch (error) {
     res.status(500).json({
@@ -53,24 +53,40 @@ const updateproduct = async (req, res) => {
 };
 
 // delete Product
-const deleteProduct = async(req,res)=>{
-    try {
-        await Product.findByIdAndDelete(req.params.id)
+const deleteProduct = async (req, res) => {
+  try {
+    await Product.findByIdAndDelete(req.params.id);
 
-        res.status().json({
-            message: "Deleted"
-        })
-    } catch (error) {
-         res.status(500).json({
+    res.status().json({
+      message: "Deleted",
+    });
+  } catch (error) {
+    res.status(500).json({
       message: error.message,
     });
-    }
-}
+  }
+};
+
+const categoryFind = async (req, res) => {
+  try {
+    const category = req.query.category 
+
+    const product = await Product.find({category})
+
+    res.status(200).json(product);
+
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
 
 module.exports = {
-    createproduct,
-    getProductbyId,
-    getProducts,
-    updateproduct,
-    deleteProduct
-}
+  createproduct,
+  getProductbyId,
+  getProducts,
+  updateproduct,
+  deleteProduct,
+  categoryFind
+};

@@ -525,3 +525,19 @@ Schema defines structure of MongoDB documents.
 Why MongoDB Popular?
 
 MongoDB is flexible, scalable, and stores JSON-like documents.
+
+
+const categoryFind = async (req, res) => {
+  try {
+    const category = req.query.category 
+
+    const product = await Product.find({category})
+
+    res.status(200).json(product);
+
+  } catch (error) {
+    res.status(500).json({
+      message: error.message,
+    });
+  }
+};
